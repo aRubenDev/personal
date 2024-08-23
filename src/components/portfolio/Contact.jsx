@@ -8,10 +8,10 @@ export default function Contact() {
     }
 
     const form = event.target;
-    const email = form.elements["email"].value;
+    const name = form.elements["name"].value;
     const message = form.elements["message"].value;
-    const subject = `Contacto de Ruben`;
-    const body = `Hola, me interesa contactarte. Mi correo es ${email}. ${message}`;
+    const subject = `Correo de contacto - ${name}`;
+    const body = `Hola, Ruben García. \n\n${message}`;
 
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent("contact@arubendev.me")}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.open(gmailUrl, '_blank', 'noopener,noreferrer');
@@ -34,7 +34,25 @@ export default function Contact() {
         className="mx-auto w-full max-w-md"
         onSubmit={handleSubmit}
       >
+
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div className="sm:col-span-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Nombre
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="name"
+                name="name"
+                type="name"
+                autoComplete="name"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#B2DAB2] sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
           <div className="sm:col-span-2">
             <label
               htmlFor="email"
@@ -52,6 +70,7 @@ export default function Contact() {
               />
             </div>
           </div>
+
           <div className="sm:col-span-2">
             <label
               htmlFor="message"
