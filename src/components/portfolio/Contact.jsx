@@ -1,6 +1,22 @@
-
-
 export default function Contact() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!event.target.checkValidity()) {
+      event.target.reportValidity();
+      return;
+    }
+
+    const form = event.target;
+    const email = form.elements["email"].value;
+    const message = form.elements["message"].value;
+    const subject = `Contacto de Ruben`;
+    const body = `Hola, me interesa contactarte. Mi correo es ${email}. ${message}`;
+
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent("contact@arubendev.me")}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="flex flex-col items-center h-screen p-6 w-full">
       <div className="flex flex-col text-center items-center">
@@ -12,7 +28,12 @@ export default function Contact() {
           Contacta conmigo a través de este formulario.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto w-full max-w-md">
+      <form
+        action="#"
+        method="POST"
+        className="mx-auto w-full max-w-md"
+        onSubmit={handleSubmit}
+      >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <label
