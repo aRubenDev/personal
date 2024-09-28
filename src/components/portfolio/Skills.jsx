@@ -15,7 +15,7 @@ import { DiDotnet, DiGit, DiGithubBadge, DiBootstrap, DiJenkins } from "react-ic
 
 export default function Skills() {
   return (
-    <section className="flex flex-col w-full min-h-screen p-4 items-center">
+    <section className="flex flex-col w-full p-4 items-center">
       <div className="flex flex-col text-center items-center">
         <h1 className="relative flex text-5xl font-bold my-5 mb-16 text-center">
           Habilidades
