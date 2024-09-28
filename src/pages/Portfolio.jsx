@@ -4,6 +4,7 @@ import HeroPortfolio from "../components/portfolio/HeroPortfolio";
 import Skills from "../components/portfolio/Skills";
 import Contact from "../components/portfolio/Contact";
 import SeparatorSections from "../components/widgets/SeparatorSections";
+import Projects from "../components/portfolio/Projects";
 
 export default function Portfolio() {
   return (
@@ -12,6 +13,8 @@ export default function Portfolio() {
         <HeroPortfolio />
         <SeparatorSections />
         <Skills />
+        <SeparatorSections />
+        <Projects />
         <SeparatorSections />
         <Contact />
       </section>
