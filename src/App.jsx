@@ -1,13 +1,13 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
-import { TbArrowBadgeUpFilled } from "react-icons/tb";
 
 import Portfolio from "./pages/Portfolio";
+import Projects from "./pages/projects";
 
 import "./App.css";
 import "@fontsource/poppins";
+import ProjectsLayout from "./layouts/ProjectsLayout";
 
 export default function App() {
   return (
@@ -21,20 +21,16 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Portfolio />} />
+          {/* Ruta sin layout para la página principal de "Projects" */}
+          <Route path="/projects" element={<Projects />} />
+
+          {/* Ruta con layout solo cuando hay parámetros */}
+          <Route path="/projects/:project" element={<ProjectsLayout />}>
+            <Route path="" element={<Projects />} />
+          </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
-
-      <motion.div
-        className="fixed bottom-5 right-5"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        /* al hacer un hover que sea mas oscuro */
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ duration: 0.2 }}
-      >
-        <TbArrowBadgeUpFilled className="text-5xl text-[#8DA2B5]" />
-      </motion.div>
     </>
   );
 }

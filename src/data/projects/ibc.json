@@ -1,0 +1,44 @@
+{
+  "greetings": {
+    "name": "Herman"
+  },
+  "carenet": {
+    "title": "CareNet",
+    "elements": [
+      {
+        "day": "Monday",
+        "sites": ["Cairo, Egypt", "Paris, France"]
+      },
+      {
+        "day": "Tuesday",
+        "sites": ["Berlin, Germany", "Bielefeld, Germany"]
+      },
+      {
+        "day": "Wednesday",
+        "sites": ["Bonn, Germany", "Bremen, Germany"]
+      },
+      {
+        "day": "Thursday",
+        "sites": ["Cologne, Germany", "Darmstadt, Germany"]
+      },
+      {
+        "day": "Friday",
+        "sites": ["London, England", "Düsseldorf, Germany"]
+      }
+    ]
+  },
+  "updates": [
+    {
+      "title": "Multinational Church London",
+      "description": "has update their website and social media accounts"
+    },
+    {
+      "title": "IBC Essen",
+      "description": "has made their website and social media accounts"
+    },
+    {
+      "title": "IBC German",
+      "description": "has designed their website and social media accounts"
+    }
+  ]
+}
