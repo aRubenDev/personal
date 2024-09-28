@@ -19,18 +19,18 @@ export default function App() {
         <link rel="canonical" href="https://arubendev.com" />
       </Helmet>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Portfolio />} />
-          {/* Ruta sin layout para la página principal de "Projects" */}
-          <Route path="/projects" element={<Projects />} />
+  <Routes>
+    <Route path="/" element={<Portfolio />} />
+    
+    <Route path="/projects" element={<ProjectsLayout />}>
+      <Route index element={<Projects />} />
+      <Route path=":project" element={<Projects />} />
+      <Route path=":project/:page" element={<Projects />} />
+    </Route>
 
-          {/* Ruta con layout solo cuando hay parámetros */}
-          <Route path="/projects/:project" element={<ProjectsLayout />}>
-            <Route path="" element={<Projects />} />
-          </Route>
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </BrowserRouter>
+    <Route path="*" element={<Navigate to="/" />} />
+  </Routes>
+</BrowserRouter>
     </>
   );
 }

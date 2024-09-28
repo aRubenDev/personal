@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import ProjectIBC from "./ProjectIBC";
+import ProjectIBC from "./ibc";
 
 const Projects = () => {
   const { project } = useParams();

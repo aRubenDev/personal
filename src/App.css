@@ -28,3 +28,13 @@ body {
   overflow-x: auto; /* Permite desplazamiento horizontal */
   white-space: nowrap; /* Evita que los elementos se envuelvan */
 }
+
+.ibc-active-link-bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity)) /* #93c5fd */;
+}
+
+.ibc-active-link-text {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity)) /* #1d4ed8 */;
+}

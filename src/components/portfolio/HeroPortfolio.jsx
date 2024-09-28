@@ -22,18 +22,18 @@ export default function HeroPortfolio() {
           <span className="absolute -bottom-5 p-1 w-20 h-1 bg-[#B2DAB2] rounded-full"></span>
         </h1>
 
-        <figure class="max-w-screen-md mx-auto text-center">
+        <figure className="max-w-screen-md mx-auto text-center">
           <TbQuote className="size-16 mx-auto mb-3 text-gray-400 dark:text-gray-600" />
           <blockquote>
-            <p class="text-2xl italic font-medium">
+            <p className="text-2xl italic font-medium">
               "La calidad de un software depende más de la habilidad del
               programador que de las herramientas utilizadas."
             </p>
           </blockquote>
-          <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
-            <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
-              <cite class="pe-3 font-medium">Linus Torvalds</cite>
-              <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">
+          <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+            <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+              <cite className="pe-3 font-medium">Linus Torvalds</cite>
+              <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
                 Creador de Linux y Git
               </cite>
             </div>
