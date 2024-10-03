@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function CarenetIBC({ data }) {
   return (
-    <div className="sticky p-4 bg-white h-max w-full rounded-3xl text-center">
+    <div className="p-4 bg-white h-max w-full rounded-3xl text-center">
       <h1 className="text-2xl font-extrabold mb-5">ibc {data.title}</h1>
       {data.elements.map((element, index) => (
         <motion.div

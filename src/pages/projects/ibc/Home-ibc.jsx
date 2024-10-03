@@ -9,23 +9,20 @@ import data from "../../../data/projects/ibc.json";
 export default function HomeIBC() {
   return (
     <>
-      <section className="relative flex w-full bg-[#E0F0FF] rounded-3xl p-8 gap-8 flex-1 overflow-hidden">
-        <div className="w-2/3 space-y-8 overflow-y-auto no-scrollbar">
+      <section className="relative flex lg:flex-row flex-col w-full bg-[#E0F0FF] rounded-3xl p-8 gap-8 overflow-hidden">
+        <div className="lg:w-2/3 space-y-8 overflow-y-auto no-scrollbar h-full w-full">
           {" "}
           {/* Agregar overflow-y-auto */}
           <GreetingsIBC data={data.greetings} />
           <EventsIBC />
           <UpdatesIBC data={data.updates} />
+          <div className="lg:hidden block">
+            <CarenetIBC data={data.carenet} />
+          </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          style={{ position: "sticky", top: 0 }}
-          className="w-1/3"
-        >
-          <CarenetIBC data={data.carenet} />
-        </motion.div>
+        <div className="lg:w-1/3 lg:block hidden">
+            <CarenetIBC data={data.carenet} />
+        </div>
       </section>
       <motion.div
         whileHover={{ paddingBottom: "10px" }}
